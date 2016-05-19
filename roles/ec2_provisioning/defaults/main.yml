@@ -4,7 +4,7 @@ instance_type: t2.micro
 ami: ami-9abea4fb
 vpc_subnet_id: subnet-46b74830
 region: us-west-2
-instance_tags: {"Name": "ansible-built"}
+instance_tags: {"Name": "iris-site"}
 root_ebs_size: 8
 zone: us-west-2a
 instance_profile_name: roboiris_boss

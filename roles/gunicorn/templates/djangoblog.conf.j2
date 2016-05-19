@@ -1,4 +1,4 @@
-description "imagersite"
+description "iris-site"
 
 start on (filesystem)
 stop on runlevel [016]
@@ -6,8 +6,8 @@ stop on runlevel [016]
 respawn
 setuid www-data
 setgid www-data
-chdir {{ django_home }}/imagersite/
-env DJANGO_SETTINGS_MODULE=imagersite.settings
+chdir {{ django_home }}/iris-site/
+env DJANGO_SETTINGS_MODULE=iris_site.settings
 env SECRET_KEY="{{ SECRET_KEY }}"
 env DB_NAME="{{ DB_NAME }}"
 env DB_USER="{{ DB_USER }}"
@@ -15,6 +15,4 @@ env DB_PASSWORD="{{ DB_PASSWORD }}"
 env DB_HOST="{{ DB_HOST }}"
 env DB_PORT="{{ DB_PORT }}"
 env IEMAIL="{{ IEMAIL }}"
-env IMAGER_EMAIL_HOST_USER="{{ IMAGER_EMAIL_HOST_USER }}"
-env IMAGER_EMAIL_HOST_PASSWORD="{{ IMAGER_EMAIL_HOST_PASSWORD }}"
-exec gunicorn -b 127.0.0.1:8000 -w 4 imagersite.wsgi --error-logfile /tmp/gunicorn-error.log
+exec gunicorn -b 127.0.0.1:8000 -w 4 iris_site.wsgi --error-logfile /tmp/gunicorn-error.log

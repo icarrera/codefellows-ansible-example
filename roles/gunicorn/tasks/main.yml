@@ -6,7 +6,7 @@
 
 - name: Create gunicorn Upstart Job
   sudo: yes
-  template: src=djangoblog.conf.j2 dest=/etc/init/imager.conf
+  template: src=djangoblog.conf.j2 dest=/etc/init/iris-site.conf
 
 - name: Start gunicorn Upstart Job
   sudo: yes

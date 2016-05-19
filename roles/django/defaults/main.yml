@@ -1,2 +1,2 @@
-django_home: /home/ubuntu/django-imager
-rds_db_instance: imager
+django_home: /home/ubuntu/my-site
+rds_db_instance: iris_site
